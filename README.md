@@ -3,7 +3,7 @@ Felicity Solar (FSolar) FLA48300 15 kWh Battery Device has built in WiFi.
 
 ## How to connect
 
-You can connect it with default passwort "12345678". You probably will get the IP-Address 192.168.155.2/24 and the battery will have 192.168.155.1/24.
+You can connect it with default password "12345678". You probably will get the IP-Address 192.168.155.2/24 and the battery will have 192.168.155.1/24.
 
 You can connect to TCP Port 192.168.155.1:53970 and send "wifilocalMonitor:get dev real infor" and you will get an answer JSON with Battery data.
 
