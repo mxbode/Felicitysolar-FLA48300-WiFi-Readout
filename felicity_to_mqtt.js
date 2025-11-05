@@ -159,7 +159,8 @@ function connectAndQuery(host, port, query, opts = {}) {
         mqttClient.publish(s.host.replaceAll('.', '-')+"/Batsoc", String(json['Batsoc'][0][0]/100));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/Templist1", String(json['Templist'][0][0]/10));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/Templist2", String(json['Templist'][0][1]/10));
-        mqttClient.publish(s.host.replaceAll('.', '-')+"/BattList", String(json['BattList'][0][0]/1000));
+        mqttClient.publish(s.host.replaceAll('.', '-')+"/BattListVoltage", String(json['BattList'][0][0]/1000));
+        mqttClient.publish(s.host.replaceAll('.', '-')+"/BattListAmpere", String(json['BattList'][1][0]/10));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/BatsocList", String(json['BatsocList'][0][0]/100));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/CellVoltage0", String(json['BatcelList'][0][0]/1000));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/CellVoltage1", String(json['BatcelList'][0][1]/1000));
