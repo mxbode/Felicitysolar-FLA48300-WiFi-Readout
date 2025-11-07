@@ -31,5 +31,11 @@ $ npm install mqtt
 you can also make a cronjob
 
 ```
-* * * * * /usr/bin/nodejs /home/automation/felicity_to_mqtt.js #runs every minute
+* * * * * /usr/bin/nodejs /home/automation/felicity_to_mqtt.js >> /home/automation/felicity_to_mqtt.log #runs every minute
 ``` 
+
+## What you get (preview)
+You can now proceed with the data with your preferred tools and see how good/bad your battery performs:
+
+![Screenshot of grafana cell voltages fully charged](/screenshot_cell_voltages1.png)
+![Screenshot of grafana cell voltages fully charged](/screenshot_cell_voltages2.png)

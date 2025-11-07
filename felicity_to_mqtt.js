@@ -139,7 +139,12 @@ function connectAndQuery(host, port, query, opts = {}) {
           // kein gültiges JSON, überspringe Host
           continue;
         }
-
+        if(json['Batt'][0][0] == 0) {
+                // Inhalt simpel prüfen und ggf. Host überspringen
+                console.log("Invalid data? (json(Batt)[0] == 0). Dump:")
+                console.log(res.response.toString())
+                continue
+        }
         mqttClient.publish(s.host.replaceAll('.', '-')+"/CommVer", String(json['CommVer']));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/wifiSN", String(json['wifiSN']));
         mqttClient.publish(s.host.replaceAll('.', '-')+"/modID", String(json['modID']));
